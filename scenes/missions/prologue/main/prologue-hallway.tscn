@@ -1,0 +1,132 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/scripts/prologue-hallway.gd" type="Script" id=1]
+[ext_resource path="res://assets/img/Hallway.PNG" type="Texture" id=2]
+[ext_resource path="res://fonts/feast_of_flesh_45.tres" type="DynamicFont" id=3]
+
+
+
+[node name="Hallway" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Margin" ]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+position = Vector2( 639, 359.919 )
+scale = Vector2( 1.41814, 1.16155 )
+texture = ExtResource( 2 )
+
+[node name="LivingRoomDoor" type="Button" parent="." index="1"]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 701.0
+margin_top = 447.0
+margin_right = 1025.0
+margin_bottom = 583.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Living Room Door"
+flat = false
+align = 1
+_sections_unfolded = [ "Mouse", "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="Stairs" type="Button" parent="." index="2"]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 291.0
+margin_top = 162.0
+margin_right = 615.0
+margin_bottom = 298.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Stairs"
+flat = false
+align = 1
+_sections_unfolded = [ "Mouse", "Visibility", "custom_colors", "custom_fonts" ]
+
+[node name="FrontDoor" type="Button" parent="." index="3"]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 717.0
+margin_top = 213.0
+margin_right = 1041.0
+margin_bottom = 349.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 3 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Front Door"
+flat = false
+align = 1
+_sections_unfolded = [ "Mouse", "Visibility", "custom_colors", "custom_fonts" ]
+
+[connection signal="pressed" from="LivingRoomDoor" to="." method="_on_LivingRoomDoor_pressed"]
+
+[connection signal="pressed" from="Stairs" to="." method="_on_Stairs_pressed"]
+
+[connection signal="pressed" from="FrontDoor" to="." method="_on_FrontDoor_pressed"]
+
+

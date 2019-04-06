@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/scripts/prologue.gd" type="Script" id=1]
+[ext_resource path="res://assets/img/Background.png" type="Texture" id=2]
+[ext_resource path="res://assets/img/House.png" type="Texture" id=3]
+[ext_resource path="res://fonts/feast_of_flesh_45.tres" type="DynamicFont" id=4]
+
+
+
+[node name="Prologue" type="Control" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+script = ExtResource( 1 )
+_sections_unfolded = [ "Margin" ]
+
+[node name="Background" type="Sprite" parent="." index="0"]
+
+position = Vector2( 655.693, 361.762 )
+texture = ExtResource( 2 )
+
+[node name="AdriansHouse" type="Sprite" parent="." index="1"]
+
+position = Vector2( 207.339, 539.09 )
+texture = ExtResource( 3 )
+
+[node name="Random" type="Sprite" parent="." index="2"]
+
+position = Vector2( 645.975, 531.553 )
+texture = ExtResource( 3 )
+
+[node name="JoshuasHouse" type="Sprite" parent="." index="3"]
+
+position = Vector2( 1080.09, 534.568 )
+texture = ExtResource( 3 )
+
+[node name="FrontDoor" type="Button" parent="." index="4"]
+
+show_behind_parent = true
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 888.0
+margin_top = 573.0
+margin_right = 1212.0
+margin_bottom = 709.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+focus_mode = 2
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_disabled = Color( 0, 0, 0, 0 )
+custom_colors/font_color = Color( 0, 0, 0, 0 )
+custom_colors/font_color_hover = Color( 0, 0, 0, 0 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 0 )
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+group = null
+text = "Living Room Door"
+flat = false
+align = 1
+_sections_unfolded = [ "Mouse", "Visibility", "custom_colors", "custom_fonts" ]
+
+[connection signal="pressed" from="FrontDoor" to="." method="_on_FrontDoor_pressed"]
+
+

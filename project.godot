@@ -1,0 +1,45 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Control",
+"class": "DialogueBox",
+"language": "GDScript",
+"path": "res://scenes/scripts/prison-dialogue.gd"
+}, {
+"base": "Node",
+"class": "DialoguePlayer",
+"language": "GDScript",
+"path": "res://scenes/dialogue/DialoguePlayer.gd"
+} ]
+_global_script_class_icons={
+"DialogueBox": "",
+"DialoguePlayer": ""
+}
+
+[application]
+
+config/name="Undead Nightmare"
+run/main_scene="res://scenes/title_screen/splash.tscn"
+boot_splash/image="res://assets/img/12182451_762176520554750_1629164559740304993_o (1).png"
+config/icon="res://icon.png"
+
+[autoload]
+
+DialogueDatabase="*res://scenes/dialogue/DialogueDatabase.gd"
+
+[display]
+
+window/size/width=1280
+window/size/height=720
+
+[rendering]
+
+environment/default_clear_color=Color( 0, 0, 0, 1 )

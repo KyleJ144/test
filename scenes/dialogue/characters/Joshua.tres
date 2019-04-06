@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://assets/characters/survivors/joshua/png/2/idle/2_terrorist_2_Idle_001.png" type="Texture" id=1]
+[ext_resource path="res://scenes/dialogue/characters/Character.gd" type="Script" id=2]
+
+[resource]
+script = ExtResource( 2 )
+display_name = "Joshua"
+backstory = "Joshua has served his time in prison and he is now awaiting release"
+expressions = {
+"neutral": ExtResource( 1 )
+}
+
